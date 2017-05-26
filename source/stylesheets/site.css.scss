@@ -1,24 +1,28 @@
 @import 'normalize';
 @import 'simple-grid';
 
-$green : #5DF35C;
-$blue : #22ADC2;
-$pink : #F35C9F;
-$light-grey: #F3F3F3;
-$dark-grey: #736F66;
-$white: #FFFFFF;
+$yellow : #F8A21C;
+$purple : #443D51;
 
-h1 {
-  color: $pink;
+img.logo {
+  max-width: 200px;
+}
+
+h1, h2, h3, h4 {
+  color: $purple;
+  font-family: Avenir;
 }
 
 .bulb-step {
-  outline: 3px solid $blue;
+  outline: 5px solid $purple;
   .bulb-number {
     width: 100%;
     margin-top: 0;
+    margin-bottom: 0;
     text-align: center;
-    background: $pink;
+    background: $purple;
+    color: $yellow;
+    font-weight: 600;
   }
   .step-description {
     padding: 0.5em;
