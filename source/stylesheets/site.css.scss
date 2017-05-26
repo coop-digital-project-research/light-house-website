@@ -10,6 +10,7 @@
 
 $yellow : #F8A21C;
 $purple : #443D51;
+$salmon : #D5827C;
 $green  : #339933;
 $white  : #FFFFFF;
 
@@ -35,8 +36,13 @@ img.logo {
   max-width: 500px;
 }
 
-h1, h2, h3, h4 {
+h1, h3, h4 {
   color: $purple;
+  font-family: Avenir;
+}
+
+h2 {
+  color: $salmon;
   font-family: Avenir;
 }
 
@@ -69,6 +75,7 @@ h1, h2, h3, h4 {
   }
   h3 {
     margin-top: 0;
+    font-size: 1.3em;
   }
 }
 
@@ -85,5 +92,6 @@ h1, h2, h3, h4 {
     background: darken($green, 10);
   }
   padding-top: 3em;
+  padding-bottom: 3em;
 }
 
