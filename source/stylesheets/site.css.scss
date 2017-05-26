@@ -4,12 +4,26 @@
 $yellow : #F8A21C;
 $purple : #443D51;
 
-body {
-  margin-top: 3em;
+.prototype-header {
+  background: orange;
+  border-bottom: 1px solid #D08600;
+  text-align: center;
+  padding: 0.25em;
+  p {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  a {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+  }
 }
 
 img.logo {
-  max-width: 200px;
+  margin-top: 3em;
+  width: 100%;
+  max-width: 500px;
 }
 
 h1, h2, h3, h4 {
@@ -19,14 +33,24 @@ h1, h2, h3, h4 {
 
 .bulb-step {
   outline: 5px solid $purple;
+  position: relative;
+  padding-top: 2em;
+  img.bulb {
+    position: absolute;
+    top: -1.5em;
+    height: 4em;
+    width: 100%;
+  }
   .bulb-number {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    background: $purple;
-    color: $yellow;
+    color: $purple;
     font-weight: 600;
+    z-index: 2;
+    position: absolute;
+    top: -1em;
   }
   .step-description {
     padding: 0.5em;
