@@ -1,0 +1,31 @@
+@import 'normalize';
+@import 'simple-grid';
+
+$green : #5DF35C;
+$blue : #22ADC2;
+$pink : #F35C9F;
+$light-grey: #F3F3F3;
+$dark-grey: #736F66;
+$white: #FFFFFF;
+
+h1 {
+  color: $pink;
+}
+
+.bulb-step {
+  outline: 3px solid $blue;
+  .bulb-number {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    background: $pink;
+  }
+  .step-description {
+    padding: 0.5em;
+    margin-top: 0;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
+
