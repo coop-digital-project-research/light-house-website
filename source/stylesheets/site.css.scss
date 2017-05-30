@@ -20,7 +20,6 @@ $lh-3-sunrise:  #CD6A62;
 $lh-4-warm-sun: #EA7C41;
 $lh-5-orange:   #FB8E00;
 
-$green:         #339933;
 $white:         #FFFFFF;
 
 body {
@@ -122,7 +121,7 @@ p {
 
 .call-to-action {
   a {
-    background: $green;
+    background: $lh-3-sunrise;
     padding: 1.5em 2em;
     color: $white;
     font-weight: 400;
@@ -130,7 +129,7 @@ p {
     text-decoration: none;
   }
   a:hover {
-    background: darken($green, 10);
+    background: darken($lh-3-sunrise, 10);
   }
   padding-top: 3em;
   padding-bottom: 3em;
