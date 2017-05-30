@@ -52,6 +52,7 @@ h1, h3, h4 {
 }
 
 header {
+  border-bottom: 2px dashed rgba($lh-1-purple,0.5);
   h1 {
     @media only screen and (min-width: $breakpoint-large) {
       margin-top: 4.4rem;
