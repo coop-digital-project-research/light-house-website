@@ -118,23 +118,6 @@ p {
   }
 }
 
-
-.call-to-action {
-  a {
-    background: $lh-3-sunrise;
-    padding: 1.5em 2em;
-    color: $white;
-    font-weight: 400;
-    @include border-radius(0.5em);
-    text-decoration: none;
-  }
-  a:hover {
-    background: darken($lh-3-sunrise, 10);
-  }
-  padding-top: 3em;
-  padding-bottom: 3em;
-}
-
 section {
   &.how-it-works {
     margin-bottom: 2rem;
@@ -211,13 +194,29 @@ section {
   }
 }
 
+section.call-to-action {
+  h2 {
+    color: $lh-5-orange;
+  }
+  .button {
+    a {
+      background: $lh-3-sunrise;
+      padding: 1.5em 2em;
+      color: $white;
+      font-weight: 400;
+      @include border-radius(0.5em);
+      text-decoration: none;
+    }
+    a:hover {
+      background: darken($lh-3-sunrise, 10);
+    }
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+
 footer {
   @media only screen and (min-width: $breakpoint-large) {
     margin-bottom: 8rem;
   }
-  h2 {
-    color: $lh-5-orange;
-  }
 }
-
-
