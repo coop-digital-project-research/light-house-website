@@ -64,6 +64,12 @@ h2 {
   font-family: Avenir;
 }
 
+p {
+  @media only screen and (min-width: $breakpoint-large) {
+    font-size: 24px;
+  }
+}
+
 .bulb-step {
   @include border-radius(0.5em);
   background: #EEEEEE;
