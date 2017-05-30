@@ -23,6 +23,10 @@ $lh-5-orange:   #FB8E00;
 $green:         #339933;
 $white:         #FFFFFF;
 
+body {
+  color: $purple;
+}
+
 .prototype-header {
   background: orange;
   border-bottom: 1px solid #D08600;
@@ -43,9 +47,8 @@ $white:         #FFFFFF;
 
 img.logo {
   margin-top: 3em;
-  width: 100%;
-  max-width: 500px;
-  margin-left: -49px;
+  width: 180px;
+  margin-left: -43px;
 }
 
 h1, h3, h4 {
