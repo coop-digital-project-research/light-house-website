@@ -8,11 +8,20 @@
           border-radius: $radius;
 }
 
-$yellow : #F8A21C;
-$purple : #443D51;
-$salmon : #D5827C;
-$green  : #339933;
-$white  : #FFFFFF;
+$yellow :       #F8A21C;
+$purple :       #443D51;
+
+$salmon :       #D5827C;
+
+
+$lh-1-purple:   #766C8A;
+$lh-2-dusk:     #9F6A7C;
+$lh-3-sunrise:  #CD6A62;
+$lh-4-warm-sun: #EA7C41;
+$lh-5-orange:   #FB8E00;
+
+$green:         #339933;
+$white:         #FFFFFF;
 
 .prototype-header {
   background: orange;
