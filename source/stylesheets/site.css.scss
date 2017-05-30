@@ -42,6 +42,16 @@ h1, h3, h4 {
   font-family: Avenir;
 }
 
+header {
+  h1 {
+    @media only screen and (min-width: $breakpoint-large) {
+      font-size: 72px;
+      line-height: 1.2;
+    }
+  }
+
+}
+
 h2 {
   color: $salmon;
   font-family: Avenir;
