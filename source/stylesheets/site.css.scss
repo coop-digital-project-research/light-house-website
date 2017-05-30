@@ -54,6 +54,7 @@ h1, h3, h4 {
 header {
   h1 {
     @media only screen and (min-width: $breakpoint-large) {
+      margin-top: 4.4rem;
       font-size: 72px;
       line-height: 1.2;
     }
@@ -62,6 +63,9 @@ header {
 }
 
 .colophon {
+  @media only screen and (min-width: $breakpoint-large) {
+    padding-top: 3.6rem;
+  }
   p {
     font-size: 14px;
     max-width: 160px;
@@ -85,7 +89,9 @@ p {
 
 .proposition {
   h2 {
-    margin-top: 4rem;
+    @media only screen and (min-width: $breakpoint-large) {
+      margin-top: 4rem;
+    }
     &:nth-of-type(5) {
       color: $lh-1-purple;
     }
