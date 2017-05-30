@@ -8,8 +8,8 @@
           border-radius: $radius;
 }
 
-$yellow :       #F8A21C;
-$purple :       #443D51;
+$yellow:       #F8A21C;
+$purple:       #443D51;
 
 $salmon :       #D5827C;
 
@@ -68,16 +68,33 @@ header {
   }
 }
 
-h2 {
-  color: $salmon;
-  font-family: Avenir;
-  max-width: 600px;
-  @media only screen and (min-width: $breakpoint-large) {
-    font-size: 36px;
-    line-height: 1.4;
-  }
+.proposition {
 
+  h2 {
+    font-family: Avenir;
+    max-width: 600px;
+    @media only screen and (min-width: $breakpoint-large) {
+      font-size: 36px;
+      line-height: 1.4;
+    }
+    &:nth-of-type(5) {
+      color: $lh-1-purple;
+    }
+    &:nth-of-type(4) {
+      color: $lh-2-dusk;
+    }
+    &:nth-of-type(3) {
+      color: $lh-3-sunrise;
+    }
+    &:nth-of-type(2) {
+      color: $lh-4-warm-sun;
+    }
+    &:nth-of-type(1) {
+      color: $lh-5-orange;
+    }
+  }
 }
+
 
 p {
   @media only screen and (min-width: $breakpoint-large) {
