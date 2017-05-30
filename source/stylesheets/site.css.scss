@@ -125,6 +125,10 @@ section {
       color: $lh-1-purple;
     }
 
+    p {
+      font-size: 18px;
+    }
+
     svg.lightbulb {
       position: absolute;
       left: calc(50% - 16px);
@@ -182,13 +186,10 @@ section {
       .step-description {
         padding: 0.5em;
         margin-top: 0;
-        p {
-          font-size: 18px;
+        h3 {
+          margin-top: 0;
+          font-size: 1.3em;
         }
-      }
-      h3 {
-        margin-top: 0;
-        font-size: 1.3em;
       }
     }
   }
