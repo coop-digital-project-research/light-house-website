@@ -68,15 +68,17 @@ header {
   }
 }
 
-.proposition {
+h2 {
+  font-family: Avenir;
+  max-width: 600px;
+  @media only screen and (min-width: $breakpoint-large) {
+    font-size: 36px;
+    line-height: 1.4;
+  }
+}
 
+.proposition {
   h2 {
-    font-family: Avenir;
-    max-width: 600px;
-    @media only screen and (min-width: $breakpoint-large) {
-      font-size: 36px;
-      line-height: 1.4;
-    }
     &:nth-of-type(5) {
       color: $lh-1-purple;
     }
@@ -151,4 +153,21 @@ p {
   padding-top: 3em;
   padding-bottom: 3em;
 }
+
+section {
+  &.how-it-works {
+    margin: 2rem;
+    h1 {
+      color: $lh-1-purple;
+    }
+  }
+}
+
+footer {
+  h2 {
+    color: $lh-5-orange;
+  }
+  
+}
+
 
