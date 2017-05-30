@@ -69,11 +69,17 @@ header {
 }
 
 h2 {
-  font-family: Avenir;
   max-width: 600px;
   @media only screen and (min-width: $breakpoint-large) {
     font-size: 36px;
     line-height: 1.4;
+  }
+}
+
+p {
+  @media only screen and (min-width: $breakpoint-large) {
+    font-size: 24px;
+    max-width: 600px;
   }
 }
 
@@ -128,16 +134,8 @@ section {
 
     }
 
-    p {
-      @media only screen and (min-width: $breakpoint-large) {
-        font-size: 24px;
-        max-width: 600px;
-      }
-    }
-
     .bulb-step {
       @include border-radius(0.5em);
-      background: #EEEEEE;
       position: relative;
       padding-top: 3em;
 
@@ -155,24 +153,28 @@ section {
       }
 
       &:nth-of-type(1) {
+        background: rgba($lh-1-purple,0.05);
         svg {
           fill: $lh-1-purple;
         }
       }
 
       &:nth-of-type(2) {
+        background: rgba($lh-2-dusk,0.05);
         svg {
           fill: $lh-2-dusk;
         }
       }
 
       &:nth-of-type(3) {
+        background: rgba($lh-3-sunrise,0.05);
         svg {
           fill: $lh-3-sunrise;
         }
       }
 
       &:nth-of-type(4) {
+        background: rgba($lh-4-warm-sun,0.05);
         svg {
           fill: $lh-4-warm-sun;
         }
@@ -181,6 +183,9 @@ section {
       .step-description {
         padding: 0.5em;
         margin-top: 0;
+        p {
+          font-size: 18px;
+        }
       }
       h3 {
         margin-top: 0;
