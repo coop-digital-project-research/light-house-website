@@ -98,46 +98,6 @@ h2 {
 }
 
 
-p {
-  @media only screen and (min-width: $breakpoint-large) {
-    font-size: 24px;
-    max-width: 600px;
-  }
-}
-
-.bulb-step {
-  @include border-radius(0.5em);
-  background: #EEEEEE;
-  position: relative;
-  padding-top: 3em;
-  img.bulb {
-    position: absolute;
-    top: -1.5em;
-    height: 4em;
-    width: 100%;
-  }
-  .bulb-number {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-align: center;
-    color: $purple;
-    font-weight: 600;
-    font-size: 1.5em;
-    z-index: 2;
-    position: absolute;
-    top: -1em;
-  }
-  .step-description {
-    padding: 0.5em;
-    margin-top: 0;
-  }
-  h3 {
-    margin-top: 0;
-    font-size: 1.3em;
-  }
-}
-
 .call-to-action {
   a {
     background: $green;
@@ -159,6 +119,73 @@ section {
     margin: 2rem;
     h1 {
       color: $lh-1-purple;
+    }
+
+    svg.lightbulb {
+      position: absolute;
+      left: calc(50% - 16px);
+      top: -19px;
+
+    }
+
+    p {
+      @media only screen and (min-width: $breakpoint-large) {
+        font-size: 24px;
+        max-width: 600px;
+      }
+    }
+
+    .bulb-step {
+      @include border-radius(0.5em);
+      background: #EEEEEE;
+      position: relative;
+      padding-top: 3em;
+
+      .bulb-number {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: $white;
+        font-weight: 500;
+        font-size: 1.5em;
+        z-index: 2;
+        position: absolute;
+        top: -1em;
+      }
+
+      &:nth-of-type(1) {
+        svg {
+          fill: $lh-1-purple;
+        }
+      }
+
+      &:nth-of-type(2) {
+        svg {
+          fill: $lh-2-dusk;
+        }
+      }
+
+      &:nth-of-type(3) {
+        svg {
+          fill: $lh-3-sunrise;
+        }
+      }
+
+      &:nth-of-type(4) {
+        svg {
+          fill: $lh-4-warm-sun;
+        }
+      }
+
+      .step-description {
+        padding: 0.5em;
+        margin-top: 0;
+      }
+      h3 {
+        margin-top: 0;
+        font-size: 1.3em;
+      }
     }
   }
 }
