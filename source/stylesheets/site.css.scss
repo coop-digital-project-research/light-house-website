@@ -46,9 +46,12 @@ body {
 }
 
 img.logo {
-  margin-top: 3em;
   width: 180px;
-  margin-left: -43px;
+  @media only screen and (min-width: $breakpoint-small) {
+    margin-top: 3em;
+    margin-left: -43px;
+
+  }
 }
 
 h1, h3, h4 {
