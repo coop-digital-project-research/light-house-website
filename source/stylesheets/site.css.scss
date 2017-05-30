@@ -32,9 +32,11 @@ $white:         #FFFFFF;
     color: #fff;
     margin-top: 0;
     margin-bottom: 0;
+    max-width: inherit;
   }
   a {
     color: #fff;
+    text-decoration: none;
     border-bottom: 1px dotted #fff;
   }
 }
