@@ -8,11 +8,7 @@
           border-radius: $radius;
 }
 
-$yellow:       #F8A21C;
 $purple:       #443D51;
-
-$salmon :       #D5827C;
-
 
 $lh-1-purple:   #766C8A;
 $lh-2-dusk:     #9F6A7C;
@@ -217,7 +213,14 @@ section.call-to-action {
 }
 
 footer {
-  @media only screen and (min-width: $breakpoint-large) {
-    margin-bottom: 8rem;
+  background: $purple;
+  color: $white;
+  padding-bottom: 3rem;
+  p {
+    color: $white;
+  }
+  img.footer-logos {
+    margin-top: 3rem;
+    max-width: 500px;
   }
 }
