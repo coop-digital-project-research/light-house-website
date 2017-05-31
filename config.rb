@@ -55,3 +55,9 @@ activate :deploy do |deploy|
 end
 
 activate :livereload
+
+
+activate :relative_assets
+set :relative_links, true
+
+activate :directory_indexes
