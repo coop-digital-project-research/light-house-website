@@ -19,6 +19,10 @@ body {
   color: $dark-grey;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  color: darken($blue,10);
+}
+
 .prototype-header {
   background: orange;
   border-bottom: 1px solid #D08600;
@@ -37,6 +41,15 @@ body {
   }
 }
 
+.tagline {
+  color: white;
+  font-weight: 500;
+  @media only screen and (min-width: $breakpoint-large) {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+}
+
 .banner {
   background: $blue;
   color: $white;
@@ -48,6 +61,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       h1 {
+        color: $white;
         @media only screen and (min-width: $breakpoint-large) {
           margin-top: 4.4rem;
           font-size: 72px;
@@ -55,12 +69,7 @@ body {
         }
       }
       p {
-        color: white;
-        font-weight: 500;
-        @media only screen and (min-width: $breakpoint-large) {
-          font-size: 2rem;
-          line-height: 1.6;
-        }
+        @extend .tagline;
       }
       .col-3 {
         display: inline-table;
@@ -71,6 +80,8 @@ body {
           order: 2;
         }
         &:before {
+          border-bottom-left-radius: 0.2rem;
+          border-bottom-right-radius: 0.2rem;
           z-index: -1;
           content: '';
           position: absolute;
@@ -126,30 +137,12 @@ p {
     @media only screen and (min-width: $breakpoint-large) {
       margin-top: 4rem;
     }
-    &:nth-of-type(5) {
-      color: $green;
-    }
-    &:nth-of-type(4) {
-      color: $green;
-    }
-    &:nth-of-type(3) {
-      color: $green;
-    }
-    &:nth-of-type(2) {
-      color: $green;
-    }
-    &:nth-of-type(1) {
-      color: $green;
-    }
   }
 }
 
 section {
   &.how-it-works {
     margin-bottom: 2rem;
-    h1 {
-      color: $green;
-    }
 
     p {
       font-size: 18px;
@@ -221,25 +214,34 @@ section {
   }
 }
 
-section.call-to-action {
-  h2 {
-    color: $green;
-  }
-  .button {
-    a {
-      background: $green;
-      padding: 1.5em 2em;
+div.cta {
+  background: $pink;
+  margin: 4rem 0;
+  padding: 2rem 0;
+  section {
+    h2 {
       color: $white;
-      font-weight: 400;
-      @include border-radius(0.5em);
-      text-decoration: none;
+      font-weight: 700;
     }
-    a:hover {
-      background: darken($green, 10);
+    p {
+      @extend .tagline;
     }
-    padding-top: 3em;
-    padding-bottom: 3em;
+    .button {
+      margin: 4rem 0 4rem 0;
+      a {
+        background: $white;
+        padding: 1.5rem 2rem;
+        color: $pink;
+        font-weight: 500;
+        @include border-radius(0.5em);
+        text-decoration: none;
+        &:hover {
+          background: darken($pink, 10);
+        }
+      }
+    }
   }
+
 }
 
 footer {
