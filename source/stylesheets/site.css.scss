@@ -71,6 +71,7 @@ p {
       flex-wrap: wrap;
       h1 {
         color: $white;
+        line-height: 1.2;
         @media only screen and (min-width: $breakpoint-large) {
           margin-top: 4.4rem;
           font-size: 72px;
@@ -130,6 +131,7 @@ p {
 
 h2 {
   max-width: 600px;
+  line-height: 1.2;
   @media only screen and (min-width: $breakpoint-large) {
     font-size: 36px;
     line-height: 1.4;
@@ -156,6 +158,9 @@ section {
     margin-bottom: 2rem;
     h1 {
       color: darken($green,25);
+      @media only screen and (max-width: $breakpoint-large) {
+        padding-top: 0;
+      }
     }
     .row {
       &:nth-of-type(2) {
@@ -217,8 +222,11 @@ section {
 
 div.cta {
   background: $pink;
-  margin: 4rem 0;
-  padding: 2rem 0;
+  margin: 2rem 0;
+  @media only screen and (min-width: $breakpoint-large) {
+    padding: 2rem 0;
+    margin: 4rem 0;
+  }
   section {
     h2 {
       color: $white;
