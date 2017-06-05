@@ -8,18 +8,15 @@
           border-radius: $radius;
 }
 
-$purple:       #443D51;
-
-$lh-1-purple:   #766C8A;
-$lh-2-dusk:     #9F6A7C;
-$lh-3-sunrise:  #CD6A62;
-$lh-4-warm-sun: #EA7C41;
-$lh-5-orange:   #FB8E00;
-
-$white:         #FFFFFF;
+$green : #5DF35C;
+$blue : #22ADC2;
+$pink : #F35C9F;
+$light-grey: #F3F3F3;
+$dark-grey: #736F66;
+$white: #FFFFFF;
 
 body {
-  color: $purple;
+  color: $dark-grey;
 }
 
 .prototype-header {
@@ -47,12 +44,8 @@ img.logo {
   }
 }
 
-h1, h2, h3, h4 {
-  color: $purple;
-}
-
 header {
-  border-bottom: 2px dashed rgba($lh-1-purple,0.5);
+  border-bottom: 2px dashed rgba($green,0.5);
   h1 {
     @media only screen and (min-width: $breakpoint-large) {
       margin-top: 4.4rem;
@@ -94,19 +87,19 @@ p {
       margin-top: 4rem;
     }
     &:nth-of-type(5) {
-      color: $lh-1-purple;
+      color: $green;
     }
     &:nth-of-type(4) {
-      color: $lh-2-dusk;
+      color: $green;
     }
     &:nth-of-type(3) {
-      color: $lh-3-sunrise;
+      color: $green;
     }
     &:nth-of-type(2) {
-      color: $lh-4-warm-sun;
+      color: $green;
     }
     &:nth-of-type(1) {
-      color: $lh-5-orange;
+      color: $green;
     }
   }
 }
@@ -115,7 +108,7 @@ section {
   &.how-it-works {
     margin-bottom: 2rem;
     h1 {
-      color: $lh-1-purple;
+      color: $green;
     }
 
     p {
@@ -149,30 +142,30 @@ section {
       }
 
       &:nth-of-type(1) {
-        background: rgba($lh-1-purple,0.05);
+        background: rgba($green,0.05);
         svg {
-          fill: $lh-1-purple;
+          fill: $green;
         }
       }
 
       &:nth-of-type(2) {
-        background: rgba($lh-2-dusk,0.05);
+        background: rgba($green,0.05);
         svg {
-          fill: $lh-2-dusk;
+          fill: $green;
         }
       }
 
       &:nth-of-type(3) {
-        background: rgba($lh-3-sunrise,0.05);
+        background: rgba($green,0.05);
         svg {
-          fill: $lh-3-sunrise;
+          fill: $green;
         }
       }
 
       &:nth-of-type(4) {
-        background: rgba($lh-4-warm-sun,0.05);
+        background: rgba($green,0.05);
         svg {
-          fill: $lh-4-warm-sun;
+          fill: $green;
         }
       }
 
@@ -190,11 +183,11 @@ section {
 
 section.call-to-action {
   h2 {
-    color: $lh-5-orange;
+    color: $green;
   }
   .button {
     a {
-      background: $lh-3-sunrise;
+      background: $green;
       padding: 1.5em 2em;
       color: $white;
       font-weight: 400;
@@ -202,7 +195,7 @@ section.call-to-action {
       text-decoration: none;
     }
     a:hover {
-      background: darken($lh-3-sunrise, 10);
+      background: darken($green, 10);
     }
     padding-top: 3em;
     padding-bottom: 3em;
@@ -210,7 +203,7 @@ section.call-to-action {
 }
 
 footer {
-  background: $purple;
+  background: $green;
   color: $white;
   padding-bottom: 3rem;
   p {
