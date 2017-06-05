@@ -28,6 +28,10 @@ h3 {
   margin-top: 4rem;
 }
 
+p {
+  line-height: 1.6;
+}
+
 .prototype-header {
   background: orange;
   border-bottom: 1px solid #D08600;
@@ -51,7 +55,7 @@ h3 {
   font-weight: $font-weight-regular;
   @media only screen and (min-width: $breakpoint-large) {
     font-size: 2rem;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 }
 
@@ -71,6 +75,7 @@ h3 {
           margin-top: 4.4rem;
           font-size: 72px;
           line-height: 1.2;
+          width: 90%;
         }
       }
       p {
@@ -83,6 +88,7 @@ h3 {
         padding: 1rem 0 0 0;
         @media only screen and (min-width: $breakpoint-med) {
           order: 2;
+          padding: 5.6rem 0 0 0;
         }
         &:before {
           border-bottom-left-radius: 0.2rem;
