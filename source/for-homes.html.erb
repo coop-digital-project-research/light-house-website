@@ -2,22 +2,24 @@
 title: Light House
 ---
 
+<div class="banner">
+  <div class="container">
+    <header class="row">
+      <div class="col-3">
+        <%= image_tag "green-quarter-logo.svg", class: "" %>
+      </div>
+      <div class="col-9">
+        <h1>Light your home for less money</h1>
+        <p>Light House are looking for eligible households in Sheffield to replace their light bulbs with reliable, low energy LED light bulbs.</p>
+      </div>
+    </header>
+  </div>
+</div>
+
 <div class="container">
-  <header class="row">
-    <div class="col-3">
-      <%= image_tag "green-quarter-light-house-logo.svg", class: "logo" %>
-    </div>
-    <div class="col-9">
-      <h1>Light your home for less money</h1>
-      <p>Light House are looking for eligible households in Sheffield to replace their light bulbs with reliable, low energy LED light bulbs.</p>
-
-    </div>
-  </header>
-  <div class="row">
+  <div class="row headlines">
     <div class="col-3 colophon">
-      <p>Light House is a collaboration between Green Quarter Community Energy Co-op and the Co-operative Group. Our mission is to accelerate Britain's transition to sustainable energy, controlled by its communities.</p>
-
-      <p>Green Quarter Community Energy Co-op is a community-owned social enterprise that develops and runs solar generation in Manchester.</p>
+      <%= image_tag "power-pack-supported.svg", class: "" %>
     </div>
     <div class="col-9 proposition">
       <h2>Save money on your electric</h2>
@@ -33,17 +35,22 @@ title: Light House
       <p>For £1 a week, Light House can give you 20 LED light bulbs. After 3 years, you’ll then own the bulbs.</p>
     </div>
   </div>
-  <section class="row call-to-action">
-    <div class="col-3">
-    </div>
-    <div class="col-8">
-      <h2>Join Light House</h2>
+</div>
+<div class="cta">
+  <div class="container">
+    <section class="row">
+      <div class="col-8">
+        <h2>Join Light House</h2>
 
-      <p>We’re looking for 25 houses in Sheffield to join Light House.</p>
+        <p>We’re looking for 25 houses in Sheffield to join Light House.</p>
 
-      <p class="button"><a href="mailto:ian.drysdale@coop.co.uk">Find out more</a></p>
-    </div>
-  </section>
+        <p class="button"><a href="mailto:ian.drysdale@coop.co.uk">Find out more</a></p>
+      </div>
+    </section>
+  </div>
+
+</div>
+<div class="container">
   <section class="how-it-works">
     <div class="row">
       <div class="col-12">
@@ -51,12 +58,8 @@ title: Light House
       </div>
     </div>
     <div class="row">
-      <div class="col-4 bulb-step">
-
-        <svg class="lightbulb" width="32px" height="43px" viewBox="0 0 32 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path d="M10,36.9989566 C10,36.4472481 10.455761,36 11.0024733,36 L20.9975267,36 C21.5511774,36 22,36.4426603 22,36.9989566 L22,38.0010434 C22,38.5527519 21.544239,39 20.9975267,39 L11.0024733,39 C10.4488226,39 10,38.5573397 10,38.0010434 L10,36.9989566 Z M10,40.9989566 C10,40.4472481 10.455761,40 11.0024733,40 L20.9975267,40 C21.5511774,40 22,40.4426603 22,40.9989566 L22,42.0010434 C22,42.5527519 21.544239,43 20.9975267,43 L11.0024733,43 C10.4488226,43 10,42.5573397 10,42.0010434 L10,40.9989566 Z M10,35 C9.86410952,31.809614 8.93161641,30.5016379 7.23051752,29.3848482 C2.87564985,26.5258308 0,21.5987374 0,16 C0,7.163444 7.163444,-1.42108547e-14 16,-1.42108547e-14 C24.836556,-1.42108547e-14 32,7.163444 32,16 C32,21.4278941 29.2971713,26.2245087 25.1639722,29.1173854 C22.7814596,30.7849351 22.09528,32.0970862 22,35 L10,35 Z"></path>
-        </svg>
-
+      <div class="col-3 bulb-step">
+        <%= image_tag "lightbulb.svg", class: "" %>
         <p class="bulb-number">1</p>
         <div class="step-description">
           <h3>Sign up and get your bulbs</h3>
@@ -64,20 +67,16 @@ title: Light House
           <p>We help you work out which bulbs you need, then send you a box in the post.</p>
         </div>
       </div>
-      <div class="col-4 bulb-step">
-        <svg class="lightbulb" width="32px" height="43px" viewBox="0 0 32 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path d="M10,36.9989566 C10,36.4472481 10.455761,36 11.0024733,36 L20.9975267,36 C21.5511774,36 22,36.4426603 22,36.9989566 L22,38.0010434 C22,38.5527519 21.544239,39 20.9975267,39 L11.0024733,39 C10.4488226,39 10,38.5573397 10,38.0010434 L10,36.9989566 Z M10,40.9989566 C10,40.4472481 10.455761,40 11.0024733,40 L20.9975267,40 C21.5511774,40 22,40.4426603 22,40.9989566 L22,42.0010434 C22,42.5527519 21.544239,43 20.9975267,43 L11.0024733,43 C10.4488226,43 10,42.5573397 10,42.0010434 L10,40.9989566 Z M10,35 C9.86410952,31.809614 8.93161641,30.5016379 7.23051752,29.3848482 C2.87564985,26.5258308 0,21.5987374 0,16 C0,7.163444 7.163444,-1.42108547e-14 16,-1.42108547e-14 C24.836556,-1.42108547e-14 32,7.163444 32,16 C32,21.4278941 29.2971713,26.2245087 25.1639722,29.1173854 C22.7814596,30.7849351 22.09528,32.0970862 22,35 L10,35 Z"></path>
-        </svg>
+      <div class="col-3 bulb-step">
+        <%= image_tag "lightbulb.svg", class: "" %>
         <p class="bulb-number">2</p>
         <div class="step-description">
           <h3>Get free replacements</h3>
           <p>If a bulb breaks within the five year period, we’ll send you a new one in the post, free of charge.</p>
         </div>
       </div>
-      <div class="col-4 bulb-step">
-        <svg class="lightbulb" width="32px" height="43px" viewBox="0 0 32 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path d="M10,36.9989566 C10,36.4472481 10.455761,36 11.0024733,36 L20.9975267,36 C21.5511774,36 22,36.4426603 22,36.9989566 L22,38.0010434 C22,38.5527519 21.544239,39 20.9975267,39 L11.0024733,39 C10.4488226,39 10,38.5573397 10,38.0010434 L10,36.9989566 Z M10,40.9989566 C10,40.4472481 10.455761,40 11.0024733,40 L20.9975267,40 C21.5511774,40 22,40.4426603 22,40.9989566 L22,42.0010434 C22,42.5527519 21.544239,43 20.9975267,43 L11.0024733,43 C10.4488226,43 10,42.5573397 10,42.0010434 L10,40.9989566 Z M10,35 C9.86410952,31.809614 8.93161641,30.5016379 7.23051752,29.3848482 C2.87564985,26.5258308 0,21.5987374 0,16 C0,7.163444 7.163444,-1.42108547e-14 16,-1.42108547e-14 C24.836556,-1.42108547e-14 32,7.163444 32,16 C32,21.4278941 29.2971713,26.2245087 25.1639722,29.1173854 C22.7814596,30.7849351 22.09528,32.0970862 22,35 L10,35 Z"></path>
-        </svg>
+      <div class="col-3 bulb-step">
+        <%= image_tag "lightbulb.svg", class: "" %>
         <p class="bulb-number">3</p>
         <div class="step-description">
           <h3>Save money forever</h3>
@@ -86,7 +85,6 @@ title: Light House
       </div>
     </div>
     <div class="row">
-      <div class="col-3"></div>
       <div class="col-8">
         <h3>We provide top quality, modern LED light bulbs</h3>
 
@@ -116,9 +114,9 @@ title: Light House
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-3"></div>
       <div class="col-8">
-        <%= image_tag "green-quarter-light-house-footer.svg", class: "footer-logos" %>
+        <p>Light House is a collaboration between Green Quarter Community Energy Co-op and the Co-operative Group. Our mission is to accelerate Britain's transition to sustainable energy, controlled by its communities.</p>
+        <p>Green Quarter Community Energy Co-op is a community-owned social enterprise that develops and runs solar generation in Manchester.</p>
       </div>
     </div>
   </div>

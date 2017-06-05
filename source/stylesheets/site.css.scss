@@ -8,18 +8,28 @@
           border-radius: $radius;
 }
 
-$purple:       #443D51;
-
-$lh-1-purple:   #766C8A;
-$lh-2-dusk:     #9F6A7C;
-$lh-3-sunrise:  #CD6A62;
-$lh-4-warm-sun: #EA7C41;
-$lh-5-orange:   #FB8E00;
-
-$white:         #FFFFFF;
+$green : #5DF35C;
+$blue : #22ADC2;
+$pink : #F35C9F;
+$light-grey: #F3F3F3;
+$dark-grey: #736F66;
+$white: #FFFFFF;
 
 body {
-  color: $purple;
+  color: $dark-grey;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: darken($blue,10);
+}
+
+h3 {
+  margin-top: 4rem;
+}
+
+p {
+  line-height: 1.6;
 }
 
 .prototype-header {
@@ -40,34 +50,94 @@ body {
   }
 }
 
-img.logo {
-  width: 180px;
-  @media only screen and (min-width: $breakpoint-small) {
-    margin-top: 3em;
-    margin-left: -43px;
-
+.tagline {
+  color: white;
+  font-weight: $font-weight-regular;
+  @media only screen and (min-width: $breakpoint-large) {
+    font-size: 2rem;
+    line-height: 1.4;
   }
 }
 
-h1, h2, h3, h4 {
-  color: $purple;
-  font-family: 'Nunito', sans-serif;
-}
-
-header {
-  border-bottom: 2px dashed rgba($lh-1-purple,0.5);
-  h1 {
-    @media only screen and (min-width: $breakpoint-large) {
-      margin-top: 4.4rem;
-      font-size: 72px;
-      line-height: 1.2;
+.banner {
+  background: $blue;
+  color: $white;
+  @media only screen and (min-width: $breakpoint-med) {
+    padding: 0 0 3rem 0;
+  }
+  header {
+    &.row {
+      display: flex;
+      flex-wrap: wrap;
+      h1 {
+        color: $white;
+        line-height: 1.2;
+        @media only screen and (min-width: $breakpoint-large) {
+          margin-top: 4.4rem;
+          font-size: 72px;
+          line-height: 1.2;
+          width: 90%;
+        }
+      }
+      p {
+        @extend .tagline;
+      }
+      .col-3 {
+        display: inline-table;
+        position: relative;
+        z-index: 1;
+        padding: 1rem 0 0 0;
+        @media only screen and (max-width: $breakpoint-med) {
+          width: auto;
+        }
+        @media only screen and (min-width: $breakpoint-med) {
+          order: 2;
+          padding: 5.6rem 0 0 0;
+        }
+        &:before {
+          border-bottom-left-radius: 0.2rem;
+          border-bottom-right-radius: 0.2rem;
+          z-index: -1;
+          content: '';
+          position: absolute;
+          background: white;
+          display: block;
+          width: calc(100% + 2rem);
+          height: calc(100% + 2rem);
+          top: -1rem;
+          left: -1rem;
+          right: -1rem;
+        }
+        img {
+          &:nth-of-type(1) {
+            margin: 0 1rem 0 0;
+          }
+          &:nth-of-type(2) {
+            margin: 2.4rem 0 0 0;
+          }
+        }
+      }
     }
   }
+}
 
+.headlines {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .colophon {
-  @media only screen and (min-width: $breakpoint-large) {
+  @media only screen and (max-width: $breakpoint-med) {
+    padding: 1.6rem 1rem 1rem 1rem;
+    width: auto;
+    background: $light-grey;
+    position: relative;
+    left: -1rem;
+    top: -0.5rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-med) {
+    order: 10; // last element
     padding-top: 3.6rem;
   }
   p {
@@ -78,6 +148,7 @@ header {
 
 h2 {
   max-width: 600px;
+  line-height: 1.2;
   @media only screen and (min-width: $breakpoint-large) {
     font-size: 36px;
     line-height: 1.4;
@@ -96,21 +167,6 @@ p {
     @media only screen and (min-width: $breakpoint-large) {
       margin-top: 4rem;
     }
-    &:nth-of-type(5) {
-      color: $lh-1-purple;
-    }
-    &:nth-of-type(4) {
-      color: $lh-2-dusk;
-    }
-    &:nth-of-type(3) {
-      color: $lh-3-sunrise;
-    }
-    &:nth-of-type(2) {
-      color: $lh-4-warm-sun;
-    }
-    &:nth-of-type(1) {
-      color: $lh-5-orange;
-    }
   }
 }
 
@@ -118,11 +174,19 @@ section {
   &.how-it-works {
     margin-bottom: 2rem;
     h1 {
-      color: $lh-1-purple;
+      color: darken($green,25);
+      @media only screen and (max-width: $breakpoint-large) {
+        padding-top: 0;
+      }
+    }
+    .row {
+      &:nth-of-type(2) {
+        margin: 2rem 0 0 0;
+      }
     }
 
     p {
-      font-size: 18px;
+      font-size: 1rem;
     }
 
     svg.lightbulb {
@@ -133,94 +197,89 @@ section {
     }
 
     .bulb-step {
-      @include border-radius(0.5em);
       position: relative;
       padding-top: 3em;
-      margin-bottom: 2rem;
-
+      margin-bottom: 4rem;
+      @media only screen and (min-width: $breakpoint-large) {
+        margin-bottom: 2rem;
+      }
       .bulb-number {
-        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: -26px;
+        left: 0;
+        width: 48px;
         margin-top: 0;
         margin-bottom: 0;
-        text-align: center;
-        color: $white;
+        text-align: left;
+        color: darken($green,25);
         font-weight: 500;
         font-size: 1.5em;
-        z-index: 2;
+        text-align: center;
+      }
+
+      img {
         position: absolute;
-        top: -1em;
-      }
-
-      &:nth-of-type(1) {
-        background: rgba($lh-1-purple,0.05);
-        svg {
-          fill: $lh-1-purple;
-        }
-      }
-
-      &:nth-of-type(2) {
-        background: rgba($lh-2-dusk,0.05);
-        svg {
-          fill: $lh-2-dusk;
-        }
-      }
-
-      &:nth-of-type(3) {
-        background: rgba($lh-3-sunrise,0.05);
-        svg {
-          fill: $lh-3-sunrise;
-        }
-      }
-
-      &:nth-of-type(4) {
-        background: rgba($lh-4-warm-sun,0.05);
-        svg {
-          fill: $lh-4-warm-sun;
-        }
+        width: 48px;
+        top: -31px;
+        left: 0;
       }
 
       .step-description {
-        padding: 0.5em;
         margin-top: 0;
         h3 {
-          margin-top: 0;
           font-size: 1.3em;
+          color: darken($green,25);
+          margin-top: 0;
         }
       }
     }
   }
 }
 
-section.call-to-action {
-  h2 {
-    color: $lh-5-orange;
+div.cta {
+  background: $pink;
+  margin: 2rem 0;
+  @media only screen and (min-width: $breakpoint-large) {
+    padding: 2rem 0;
+    margin: 4rem 0;
   }
-  .button {
-    a {
-      background: $lh-3-sunrise;
-      padding: 1.5em 2em;
+  section {
+    h2 {
       color: $white;
-      font-weight: 400;
-      @include border-radius(0.5em);
-      text-decoration: none;
+      font-weight: 700;
     }
-    a:hover {
-      background: darken($lh-3-sunrise, 10);
+    p {
+      @extend .tagline;
     }
-    padding-top: 3em;
-    padding-bottom: 3em;
+    .button {
+      margin: 4rem 0 4rem 0;
+      a {
+        background: $white;
+        padding: 1.5rem 2rem;
+        color: $pink;
+        font-weight: 500;
+        @include border-radius(0.5em);
+        text-decoration: none;
+        &:hover {
+          background: darken($pink, 10);
+          color: $white;
+        }
+      }
+    }
   }
+
 }
 
 footer {
-  background: $purple;
+  background: darken($dark-grey, 20);
   color: $white;
-  padding-bottom: 3rem;
-  p {
-    color: $white;
+  @media only screen and (min-width: $breakpoint-large) {
+    margin: 8rem 0 0 0;
+    padding: 4rem 0;
   }
-  img.footer-logos {
-    margin-top: 3rem;
-    max-width: 500px;
+  p {
+    font-size: 1rem;
+    color: $white;
   }
 }
