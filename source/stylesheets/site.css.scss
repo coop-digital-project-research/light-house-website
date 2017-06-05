@@ -17,6 +17,7 @@ $white: #FFFFFF;
 
 body {
   color: $dark-grey;
+  font-weight: 400;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -47,7 +48,7 @@ h3 {
 
 .tagline {
   color: white;
-  font-weight: 500;
+  font-weight: $font-weight-regular;
   @media only screen and (min-width: $breakpoint-large) {
     font-size: 2rem;
     line-height: 1.6;
