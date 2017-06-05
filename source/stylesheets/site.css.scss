@@ -23,6 +23,10 @@ h1,h2,h3,h4,h5,h6 {
   color: darken($blue,10);
 }
 
+h3 {
+  margin-top: 4rem;
+}
+
 .prototype-header {
   background: orange;
   border-bottom: 1px solid #D08600;
@@ -237,6 +241,7 @@ div.cta {
         text-decoration: none;
         &:hover {
           background: darken($pink, 10);
+          color: $white;
         }
       }
     }
