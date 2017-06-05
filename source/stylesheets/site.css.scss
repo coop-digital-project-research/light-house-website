@@ -46,20 +46,29 @@ img.logo {
 .banner {
   background: $blue;
   color: $white;
-  .col-3 {
-    position: relative;
-    z-index: 1;
-    &:before {
-      z-index: -1;
-      content: '';
-      position: absolute;
-      background: white;
-      display: block;
-      width: calc(100% + 2rem);
-      height: calc(100% + 2rem);
-      top: -1rem;
-      left: -1rem;
-      right: -1rem;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    .col-3 {
+      position: relative;
+      z-index: 1;
+      &:before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        background: white;
+        display: block;
+        width: calc(100% + 2rem);
+        height: calc(100% + 2rem);
+        top: -1rem;
+        left: -1rem;
+        right: -1rem;
+      }
+    }
+    .col-9 {
+      @media only screen and (max-width: $breakpoint-med) {
+        order: 2;
+      }
     }
   }
 }
