@@ -87,6 +87,9 @@ p {
         position: relative;
         z-index: 1;
         padding: 1rem 0 0 0;
+        @media only screen and (max-width: $breakpoint-med) {
+          width: auto;
+        }
         @media only screen and (min-width: $breakpoint-med) {
           order: 2;
           padding: 5.6rem 0 0 0;
@@ -118,9 +121,23 @@ p {
   }
 }
 
+.headlines {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .colophon {
-  @media only screen and (min-width: $breakpoint-large) {
+  @media only screen and (max-width: $breakpoint-med) {
+    padding: 1.6rem 1rem 1rem 1rem;
+    width: auto;
+    background: $light-grey;
+    position: relative;
+    left: -1rem;
+    top: -0.5rem;
+  }
+
+  @media only screen and (min-width: $breakpoint-med) {
+    order: 10; // last element
     padding-top: 3.6rem;
   }
   p {
