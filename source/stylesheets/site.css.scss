@@ -50,8 +50,13 @@ img.logo {
     display: flex;
     flex-wrap: wrap;
     .col-3 {
+      display: inline-table;
       position: relative;
       z-index: 1;
+      padding: 1rem 0 0 0;
+      @media only screen and (min-width: $breakpoint-med) {
+        order: 2;
+      }
       &:before {
         z-index: -1;
         content: '';
@@ -64,10 +69,12 @@ img.logo {
         left: -1rem;
         right: -1rem;
       }
-    }
-    .col-9 {
-      @media only screen and (max-width: $breakpoint-med) {
-        order: 2;
+      img {
+        &:nth-of-type(1) {
+          @media only screen and (min-width: $breakpoint-med) {
+            margin: 0 0 2.4rem 0;
+          }
+        }
       }
     }
   }
