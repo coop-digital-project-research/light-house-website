@@ -37,60 +37,64 @@ body {
   }
 }
 
-img.logo {
-  @media only screen and (min-width: $breakpoint-small) {
-    margin-top: 3em;
-  }
-}
-
 .banner {
   background: $blue;
   color: $white;
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    .col-3 {
-      display: inline-table;
-      position: relative;
-      z-index: 1;
-      padding: 1rem 0 0 0;
-      @media only screen and (min-width: $breakpoint-med) {
-        order: 2;
-      }
-      &:before {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        background: white;
-        display: block;
-        width: calc(100% + 2rem);
-        height: calc(100% + 2rem);
-        top: -1rem;
-        left: -1rem;
-        right: -1rem;
-      }
-      img {
-        &:nth-of-type(1) {
-          margin: 0 1rem 0 0;
+  @media only screen and (min-width: $breakpoint-med) {
+    padding: 0 0 3rem 0;
+  }
+  header {
+    &.row {
+      display: flex;
+      flex-wrap: wrap;
+      h1 {
+        @media only screen and (min-width: $breakpoint-large) {
+          margin-top: 4.4rem;
+          font-size: 72px;
+          line-height: 1.2;
         }
-        &:nth-of-type(2) {
-          margin: 2.4rem 0 0 0;
+      }
+      p {
+        color: white;
+        font-weight: 500;
+        @media only screen and (min-width: $breakpoint-large) {
+          font-size: 2rem;
+          line-height: 1.6;
+        }
+      }
+      .col-3 {
+        display: inline-table;
+        position: relative;
+        z-index: 1;
+        padding: 1rem 0 0 0;
+        @media only screen and (min-width: $breakpoint-med) {
+          order: 2;
+        }
+        &:before {
+          z-index: -1;
+          content: '';
+          position: absolute;
+          background: white;
+          display: block;
+          width: calc(100% + 2rem);
+          height: calc(100% + 2rem);
+          top: -1rem;
+          left: -1rem;
+          right: -1rem;
+        }
+        img {
+          &:nth-of-type(1) {
+            margin: 0 1rem 0 0;
+          }
+          &:nth-of-type(2) {
+            margin: 2.4rem 0 0 0;
+          }
         }
       }
     }
   }
 }
 
-header {
-  h1 {
-    @media only screen and (min-width: $breakpoint-large) {
-      margin-top: 4.4rem;
-      font-size: 72px;
-      line-height: 1.2;
-    }
-  }
-
-}
 
 .colophon {
   @media only screen and (min-width: $breakpoint-large) {
