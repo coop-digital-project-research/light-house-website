@@ -190,7 +190,7 @@ section {
     @media only screen and (min-width: $breakpoint-large) {
       position: relative;
       padding: 0 0 4rem 0;
-      margin: 4rem 0 8rem 0;
+      margin: 4rem 0;
       &:before {
         content: '';
         background: rgba(lighten($green,30),0.5);
