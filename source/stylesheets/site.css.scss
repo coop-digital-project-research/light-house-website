@@ -32,6 +32,10 @@ p {
   line-height: 1.6;
 }
 
+ul li {
+  font-size: 24px;
+}
+
 .prototype-header {
   background: orange;
   border-bottom: 1px solid #D08600;
@@ -170,7 +174,34 @@ p {
   }
 }
 
+table {
+  width: 100%;
+  text-align: left;
+}
+
 section {
+  &.answer {
+    h1,h2 {
+      color: darken($green,25);
+      @media only screen and (max-width: $breakpoint-large) {
+        padding-top: 0;
+      }
+    }
+    .bulb-step {
+      img {
+        width: 48px;
+      }
+      h3 {
+        margin-top: 1rem;
+        color: darken($green,25);
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 0;
+        font-size: 1rem;
+      }
+    }
+  }
   &.how-it-works {
     margin-bottom: 2rem;
     h1 {
@@ -245,7 +276,7 @@ div.cta {
     margin: 4rem 0;
   }
   section {
-    h2 {
+    h1, h2 {
       color: $white;
       font-weight: 700;
     }
