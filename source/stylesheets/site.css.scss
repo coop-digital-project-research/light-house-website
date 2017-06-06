@@ -163,6 +163,11 @@ ul li {
     font-size: 14px;
     max-width: 160px;
   }
+  span {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
 }
 
 h2 {
@@ -377,6 +382,11 @@ div.cta {
 footer {
   background: darken($dark-grey, 20);
   color: $white;
+  .colophon {
+    @media only screen and (min-width: $breakpoint-med) {
+      padding-top: 0;
+    }
+  }
   @media only screen and (min-width: $breakpoint-large) {
     margin: 8rem 0 0 0;
     padding: 4rem 0;
