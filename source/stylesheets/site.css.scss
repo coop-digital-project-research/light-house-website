@@ -366,8 +366,7 @@ div.cta {
         @include border-radius(0.5em);
         text-decoration: none;
         &:hover {
-          background: darken($pink, 10);
-          color: $white;
+          color: darken($pink, 20);
         }
       }
     }
