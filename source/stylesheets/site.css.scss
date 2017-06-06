@@ -181,8 +181,28 @@ p {
 }
 
 table {
-  width: 100%;
+  width: calc(100% + 4rem);
+  border-radius: 0.2rem;
   text-align: left;
+  background: $white;
+  position: relative;
+  padding: 2rem;
+  left: -2rem;
+  thead {
+    tr {
+      border-bottom: 1px solid $light-grey;
+      th {
+        border-bottom: 1px solid $light-grey;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+  tr {
+    vertical-align: baseline;
+  }
+  td {
+    padding: 0.4rem 0;
+  }
 }
 
 section {
