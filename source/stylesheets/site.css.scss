@@ -190,12 +190,20 @@ table {
   position: relative;
   padding: 2rem;
   left: -2rem;
+
+  thead, tbody {
+    tr {
+      td {
+        width: 20%;
+      }
+    }
+  }
+
   thead {
     tr {
       border-bottom: 1px solid $light-grey;
       th {
-        border-bottom: 1px solid $light-grey;
-        padding-bottom: 0.4rem;
+        padding-bottom: 1.4rem;
       }
     }
   }
