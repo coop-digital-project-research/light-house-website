@@ -15,6 +15,10 @@ $light-grey: #F3F3F3;
 $dark-grey: #736F66;
 $white: #FFFFFF;
 
+a {
+  color: inherit;
+}
+
 body {
   color: $dark-grey;
   font-weight: 400;
