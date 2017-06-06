@@ -185,6 +185,23 @@ table {
 
 section {
   &.answer {
+    position: relative;
+    @media only screen and (min-width: $breakpoint-large) {
+      padding: 2rem 0;
+      margin: 4rem 0 8rem 0;
+    }
+    &:before {
+      content: '';
+      background: rgba(lighten($green,30),0.2);
+      position: absolute;
+      display: block;
+      width: calc(100% + 8rem);
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: -4rem;
+      border-radius: 0.2rem;
+    }
     h1,h2 {
       color: darken($green,25);
       @media only screen and (max-width: $breakpoint-large) {
