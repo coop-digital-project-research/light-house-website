@@ -214,6 +214,12 @@ table {
   }
   tr {
     vertical-align: baseline;
+    th {
+      span {
+        border-bottom: 1px solid $green;
+        padding-bottom: 0.4rem;
+      }
+    }
   }
   td {
     padding: 0.4rem 0;
