@@ -396,7 +396,7 @@ div.cta {
 
 }
 
-footer {
+body > footer {
   background: darken($dark-grey, 20);
   color: $white;
   .colophon {
